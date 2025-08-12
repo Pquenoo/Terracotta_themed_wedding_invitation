@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+background-image: url("/static/img/fundo01.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 100vh;
+background-color: #000000; /* Cor de apoio */
+}
+ 
+.meu-botao-container{
+  display: flex;
+  justify-content: center; /* centraliza no meio */
+  gap: 5em; /* espaço entre botões */
+  margin-top: 20px;
+}
+
+
+
+.meu-botao{
+background-color: #caa484; /* Cor de fundo */
+  color: rgb(253, 243, 185); /* Cor do texto */
+  border: none; /* Remove borda padrão */
+  padding: 12px 24px; /* Espaçamento interno */
+  font-size: 20px; /* Tamanho do texto */
+  font-weight: bold; /* Negrito */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+  text-decoration: none; /* Tira sublinhado de links */
+  transition: 0.3s; /* Suaviza a transição */
+
+}
+
+.meu-botao:hover{
+background-color: #55240f; /* Cor ao passar o mouse */
+transform: scale(1.25); /* Leve aumento */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+h1{
+
+font-size: 5em;
+padding: 0px;
+color: #7c3d01; /* terracota */
+text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+margin-bottom: 10px;
+text-align: center;
+margin-top: 10px;
+
+}
+
+.message{
+font-size: 1.7em;
+  color: #6b4000;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 20px;
+
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 0;
+}
+
+.timeline::before {
+ content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #caa484, #55240f);
+}
+
+.event {
+  position: relative;
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.event:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.event:nth-child(even) {
+  left: 50%;
+}
+
+.year {
+  background-color: #caa484;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.desc {
+  margin-top: 10px;
+  background: rgba(255, 243, 237, 0.9); /* tom suave e levemente transparente */
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.event::before {
+   content: "";
+  position: absolute;
+  top: 30px;
+  width: 22px;
+  height: 22px;
+  background-color: #caa484;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(202, 164, 132, 0.7);
+  z-index: 1;
+}
+
+.event:nth-child(odd)::before {
+  right: -11px;
+}
+
+.event:nth-child(even)::before {
+  left: -10px;
+}
+
+.galeria{
+display: flex;
+gap: 10px;
+overflow-x: auto;  /* ativa barra de rolagem horizontal */
+overflow-y: hidden; /* esconde a vertical */
+height: 210px;
+padding-bottom: 10px; /* espaço para a barra de rolagem */
+scroll-behavior: smooth; /* rolagem suave */
+}
+
+.galeria img {
+  filter: saturate(0%);
+  width: 15%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid whitesmoke;
+  border-radius: 22px;
+  transition: all ease 0.7s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.galeria img:hover{
+  filter: saturate(100%);
+  flex-grow: 1;
+  width: auto;
+}
+
+.info-evento{
+background-color: #fff3ed; /* tom terracota claro */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: Arial, sans-serif;
+  color: #5a2a1d;
+
+}
+.info-evento h2 {
+  margin-bottom: 15px;
+  color: #c1440e;
+  font-size: 22px;
+  text-align: center;
+}
+
+.info-evento p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.botao-container {
+  text-align: center; /* centraliza o botão */
+}
+
+.btn-mapa {
+  display: inlin-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #caa484;
+  color: rgb(253, 243, 185);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mapa:hover {
+background-color: #55240f; /* Cor ao passar o mouse */
+transform: scale(1.25); /* Leve aumento */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.responsive{
+     max-width: 923px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
