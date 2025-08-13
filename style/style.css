@@ -8,13 +8,18 @@
   outline: none;
 }
 
+
+
 body {
-background-image: url("/static/img/img1.png");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-min-height: 100vh;
-background-color: #000000; /* Cor de apoio */
+ display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;     /* centraliza vertical */
+  min-height: 100vh;       /* altura total da tela */
+  background-image: url("/static/img/fundo0.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000000; /* Cor de apoio */
 }
  
 .meu-botao-container{
@@ -57,7 +62,7 @@ color: #7c3d01; /* terracota */
 text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 margin-bottom: 10px;
 text-align: center;
-margin-top: 2.9em;
+margin-top: 0;
 
 }
 
@@ -221,7 +226,94 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .responsive{
-     max-width: 923px;
+     max-width: 932px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.container-centralizador {
+ display: flex;
+justify-content: center;
+padding: 20px;
+align-items: center;      
+}
+
+.info {
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
+  margin: 50px;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+/* Suas outras classes */
+.mes {
+  font-size: 3em;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  margin-left: 0.7em;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.lado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.7em;
+  white-space: nowrap;
+  
+}
+
+.linha {
+  width: 60px;
+  height: 2px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+.data {
+  font-size: 7em;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.local {
+  margin-top: 20px;
+  font-weight: bold;
+  margin-left: 3em;
+}
+
+.endereco {
+  font-size: 0.99em;
+  color: #666;
+  margin-top: 5px;
+  margin-left: 3em;
+}
+
+@media (max-width: 932px) {
+h1{
+  font-size: 80px;
+  margin-left: 1.7em;
+}
+.message{
+  font-size: 40px;
+  margin-left: 3em;
+}
+.timeline{
+  margin-left: 6em;
+}
+.container-centralizador{
+
+  margin-left: 4em;
+}
+} 
+
+
+
