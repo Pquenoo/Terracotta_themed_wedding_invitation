@@ -11,16 +11,17 @@
 
 
 body {
- display: flex;
+  display: flex;
   justify-content: center; /* centraliza horizontal */
   align-items: center;     /* centraliza vertical */
   min-height: 100vh;       /* altura total da tela */
-  background-image: url("static/img/pagina_fundo.png");
+  background-image: url("../static/img/pagina_fundo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #000000; /* Cor de apoio */
 }
+
  
 .meu-botao-container{
   display: flex;
